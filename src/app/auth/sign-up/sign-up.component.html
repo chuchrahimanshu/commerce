@@ -3,7 +3,11 @@
     style="height: calc(100vh - 80px);"
 >
     <div class="flex flex-col items-center">
-      <form class="flex flex-col justify-center bg-white p-6 m-3 rounded-xl max-[400px]:w-full shadow-md">
+      <form 
+            class="flex flex-col justify-center bg-white p-6 m-3 rounded-xl max-[400px]:w-full shadow-md"
+            #signUpFormReference="ngForm"
+            (ngSubmit)="handleFormSubmit(signUpFormReference)"
+        >
         <h1 class="font-bold text-3xl mb-5 text-center">
             Sign Up
         </h1>
@@ -19,6 +23,7 @@
             name="name"
             id="signUp-name"
             required 
+            ngModel
             class="border-2 border-gray-300 mt-1 mb-3 w-[300px] rounded-md text-black py-1 px-2 focus:border-2 focus:border-blue-500 outline-none transition-all max-[400px]:w-full"
         />
         <label 
@@ -33,6 +38,8 @@
             name="email"
             id="signUp-email" 
             required 
+            ngModel
+            email
             class="border-2 border-gray-300 mt-1 mb-3 w-[300px] rounded-md text-black py-1 px-2 focus:border-2 focus:border-blue-500 outline-none transition-all max-[400px]:w-full"
         />
         <label 
@@ -48,6 +55,7 @@
             name="password"
             id="signUp-password" 
             required 
+            ngModel
             class="outline-none transition-all max-[400px]:w-full"
           />
           <!-- TODO: Add Eye Button to Toggle Password -->
@@ -59,27 +67,21 @@
             Confirm Password
             <span class="text-red-600">*</span>
         </label>
-        <div class='flex items-center justify-between border-2 border-gray-300 mt-1 mb-3 w-[300px] rounded-md text-black py-1 px-2 focus-within:border-2 focus-within:border-blue-500 max-[400px]:w-full'>
+        <div class='flex items-center justify-between border-2 border-gray-300 mt-1 mb-2 w-[300px] rounded-md text-black py-1 px-2 focus-within:border-2 focus-within:border-blue-500 max-[400px]:w-full'>
           <input 
             type="password" 
             name="confirmPassword"
             id="signUp-confirmPassword"
             required 
+            ngModel
             class="outline-none transition-all max-[400px]:w-full"
           />
           <!-- TODO: Add Eye Button to Toggle Password -->
         </div>
-        <p 
-            class="mb-1 text-center text-[14px] font-medium"
-        >
-            Already a member? 
-            <span 
-                class="text-blue-600 cursor-pointer"
-                (click)="handleNavigateSignIn()"
-            >
-                Sign In
-            </span>
-        </p>
+        <div class="flex items-top mb-2">
+            <input type="checkbox" name="seller" class="scale-110" [defaultChecked]=false ngModel>
+            <label for="signUp-check" class="font-medium text-md ml-2">Are you a Seller?</label>
+        </div>
         <button 
             type="submit" 
             class="bg-blue-600 text-white font-bold pt-1.5 pb-2 rounded-lg mt-2 max-[400px]:w-full disabled:cursor-not-allowed disabled:bg-blue-500 hover:bg-blue-700"

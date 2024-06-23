@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,5 +11,8 @@ export class SignInComponent {
 
   handleNavigateSignUp(){
     this.router.navigateByUrl("/sign-up");
+  }
+  handleFormSubmit(form: NgForm){
+      console.log(form);
   }
 }
