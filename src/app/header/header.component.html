@@ -1,33 +1,11 @@
 <header class="h-20 w-full bg-blue-700 text-white">
-    <div class="h-20 max-w-[1100px] mx-auto flex items-center justify-between">
-        <img 
-            src="../../assets/images/LOGO.png" 
-            alt="Website Logo"
-            class="h-16 cursor-pointer"
-        >
-        <section class="bg-white p-1 rounded-full flex items-center justify-between">
-            <input 
-                type="text" 
-                placeholder="Search by Product Name ..."
-                class="w-60 px-2 text-black outline-none text-base font-medium bg-transparent"
-            >
-            <button 
-                type="button" 
-                class="h-8 w-8 bg-blue-700 rounded-full p-2 flex items-center justify-center"
-            >
-                <i class="fa-solid fa-magnifying-glass text-lg"></i>
-            </button>
-        </section>
-        <nav class="list-none flex items-center gap-4 text-lg font-medium">
-            <li class="cursor-pointer">Home</li>
-            <li class="cursor-pointer">Seller</li>
-            <li class="cursor-pointer">Login</li>
-            <li class="cursor-pointer relative">
-                <i class="fa-solid fa-cart-shopping text-xl"></i>
-                <span class="absolute bg-neutral-100 text-blue-900 text-sm font-bold rounded-full p-1 h-6 w-6 flex items-center justify-center shadow-xl -mt-10 ml-5">
-                    <p>20</p>
-                </span>
-            </li>
-        </nav>
+    <div class="hidden md:flex h-20 max-w-[1100px] px-14 mx-auto items-center justify-between">
+        <header-logo></header-logo>
+        <header-search></header-search>
+        <header-links></header-links>
+    </div>
+    <div class="h-20 flex items-center justify-between md:hidden px-14">
+        <header-logo></header-logo>
+        <header-menu></header-menu>
     </div>
 </header>
