@@ -5,18 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HeaderLogoComponent } from './header/header-logo/header-logo.component';
-import { HeaderSearchComponent } from './header/header-search/header-search.component';
 import { HeaderLinksComponent } from './header/header-links/header-links.component';
 import { HeaderMenuComponent } from './header/header-menu/header-menu.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HeaderLogoComponent,
-    HeaderSearchComponent,
     HeaderLinksComponent,
-    HeaderMenuComponent
+    HeaderMenuComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

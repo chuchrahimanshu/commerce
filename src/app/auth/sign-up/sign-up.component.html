@@ -1,0 +1,91 @@
+<section 
+    class="flex justify-center items-center w-screen bg-slate-100 max-[400px]:bg-white overflow-x-hidden" 
+    style="height: calc(100vh - 80px);"
+>
+    <div class="flex flex-col items-center">
+      <form class="flex flex-col justify-center bg-white p-6 m-3 rounded-xl max-[400px]:w-full shadow-md">
+        <h1 class="font-bold text-3xl mb-5 text-center">
+            Sign Up
+        </h1>
+        <label 
+            htmlFor="signUp-name" 
+            class="font-medium text-md"
+        >
+            Full Name
+            <span class="text-red-600">*</span>
+        </label>
+        <input 
+            type="text" 
+            name="name"
+            id="signUp-name"
+            required 
+            class="border-2 border-gray-300 mt-1 mb-3 w-[300px] rounded-md text-black py-1 px-2 focus:border-2 focus:border-blue-500 outline-none transition-all max-[400px]:w-full"
+        />
+        <label 
+            htmlFor="signUp-email" 
+            class="font-medium text-md"
+        >
+            Email Address
+            <span class="text-red-600">*</span>
+        </label>
+        <input 
+            type="text" 
+            name="email"
+            id="signUp-email" 
+            required 
+            class="border-2 border-gray-300 mt-1 mb-3 w-[300px] rounded-md text-black py-1 px-2 focus:border-2 focus:border-blue-500 outline-none transition-all max-[400px]:w-full"
+        />
+        <label 
+            htmlFor="signUp-password" 
+            class="font-medium text-md"
+        >
+            Password
+            <span class="text-red-600">*</span>
+        </label>
+        <div class='flex items-center justify-between border-2 border-gray-300 mt-1 mb-3 w-[300px] rounded-md text-black py-1 px-2 focus-within:border-2 focus-within:border-blue-500 max-[400px]:w-full'>
+          <input 
+            type="password"
+            name="password"
+            id="signUp-password" 
+            required 
+            class="outline-none transition-all max-[400px]:w-full"
+          />
+          <!-- TODO: Add Eye Button to Toggle Password -->
+        </div>
+        <label 
+            htmlFor="signUp-confirmPassword" 
+            class="font-medium text-md"
+        >
+            Confirm Password
+            <span class="text-red-600">*</span>
+        </label>
+        <div class='flex items-center justify-between border-2 border-gray-300 mt-1 mb-3 w-[300px] rounded-md text-black py-1 px-2 focus-within:border-2 focus-within:border-blue-500 max-[400px]:w-full'>
+          <input 
+            type="password" 
+            name="confirmPassword"
+            id="signUp-confirmPassword"
+            required 
+            class="outline-none transition-all max-[400px]:w-full"
+          />
+          <!-- TODO: Add Eye Button to Toggle Password -->
+        </div>
+        <p 
+            class="mb-1 text-center text-[14px] font-medium"
+        >
+            Already a member? 
+            <span 
+                class="text-blue-600 cursor-pointer"
+                (click)="handleNavigateSignIn()"
+            >
+                Sign In
+            </span>
+        </p>
+        <button 
+            type="submit" 
+            class="bg-blue-600 text-white font-bold pt-1.5 pb-2 rounded-lg mt-2 max-[400px]:w-full disabled:cursor-not-allowed disabled:bg-blue-500 hover:bg-blue-700"
+        >
+            Sign Up
+        </button>
+      </form>
+    </div>
+  </section>
